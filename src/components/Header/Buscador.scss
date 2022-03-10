@@ -1,0 +1,12 @@
+@use "../../theme/palette/palette" as Palette;
+
+.btn-search {
+  background-image: url(../../../public/ic_Search.png);
+}
+.search {
+  font-size: 18px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+}

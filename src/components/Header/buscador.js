@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { realizarBusqueda } from '../../redux/actions/busqueda';
-import './Buscador.scss'
+import './Header.scss'
+import {
+  useNavigate,
+} from 'react-router-dom';
 
 
 export const Buscador = () => {
   const [value, setvalue] = useState('');
+  const navigate = useNavigate();
 
     const dispatch = useDispatch();
 
     const onSubmit = async (e) => {
         e.preventDefault();
         dispatch(realizarBusqueda(value));
+        navigate('/items/');
       };
 
       const onChange = (e) =>
@@ -20,7 +25,7 @@ export const Buscador = () => {
   return (
     <div className='search-container'>  
       <input 
-          className="search md-9"
+          className="search"
           type = "search" 
           placeholder = "Nunca dejes de buscar" 
            value={value}

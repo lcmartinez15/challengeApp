@@ -6,10 +6,10 @@ console.log(item.item.id);
   return (
     <div className='product-container'>     
         <div>
-          <img className='product-image' src={item.item.thumbnail} alt="" /> 
+          {item.item.picture!= undefined ? <img className='product-image' src={item.item.picture} alt="" />: <></> }
         </div>
         <div className='product-detail'>
-          <label>{item.item.price}</label>
+          <label>{item.item.price.amount}</label>
           <br />
           <label>{item.item.title}</label>
         </div>       

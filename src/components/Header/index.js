@@ -4,10 +4,13 @@ import { Buscador } from './buscador'
 import './Header.scss'
 export const Header = () => {
   return (
-    <div className='Header'>
-        <Logo></Logo>
+    <div className='header'>
+      <div className='containerHeader'>
+      <Logo></Logo>
         <Buscador>
         </Buscador>
+      </div>
+        
     </div>
   )
 }

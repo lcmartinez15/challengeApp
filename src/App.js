@@ -11,15 +11,15 @@ import './theme/palette/palette.scss'
 function App() {
   return (
     <Provider store={store}>
-      <Layout>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Layout>
           <Routes>
             <Route path="/" element ={<Busqueda/>}/>
             <Route path="/items/" element ={<Resultados/>}/>
             <Route path="/items/:id" element ={<Detalle/>}/>
-          </Routes>
-        </BrowserRouter>
-      </Layout>      
+          </Routes>        
+        </Layout>  
+      </BrowserRouter>    
     </Provider>
   )
 }

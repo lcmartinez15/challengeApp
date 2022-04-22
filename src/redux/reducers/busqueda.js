@@ -5,6 +5,7 @@ import { SET_ERROR, SET_ITEM, SET_RESULTADO } from "../constantes";
     itemActual: null,    
     listaItems: [],
     loading: true,
+    categories:[],
     error: {},
   };
   
@@ -15,7 +16,8 @@ import { SET_ERROR, SET_ITEM, SET_RESULTADO } from "../constantes";
       case SET_RESULTADO:
         return {
           ...state,
-          listaItems: payload,
+          listaItems: payload.items,
+          categories: payload.categories,
           loading: false,
           itemActual: null,
         };
